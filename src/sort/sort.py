@@ -17,7 +17,6 @@
 """
 import os
 import numpy as np
-from skimage import io
 
 import glob
 import time
