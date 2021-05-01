@@ -1,2 +1,6 @@
 output/
 mot_benchmark
+venv
+dist
+build
+**/*egg-info

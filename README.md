@@ -18,6 +18,8 @@ For your convenience, this repo also contains *Faster* RCNN detections for the M
 **Also see:**
 A new and improved version of SORT with a Deep Association Metric implemented in tensorflow is available at [https://github.com/nwojke/deep_sort](https://github.com/nwojke/deep_sort) .
 
+This fork packages the SORT algorithm as a pip package (simple-online-realtime-tracking).
+
 ### License
 
 SORT is released under the GPL License (refer to the LICENSE file for details) to promote the open use of the tracker and future improvements. If you require a permissive license contact Alex (alex@bewley.ai).
@@ -36,36 +38,12 @@ If you find this repo useful in your research, please consider citing:
       doi={10.1109/ICIP.2016.7533003}
     }
 
+### Installing:
 
-### Dependencies:
-
-To install required dependencies run:
+To install the package:
 ```
-$ pip install -r requirements.txt
+pip install simple-online-realtime-tracking==0.2
 ```
-
-
-### Demo:
-
-To run the tracker with the provided detections:
-
-```
-$ cd path/to/sort
-$ python sort.py
-```
-
-To display the results you need to:
-
-1. Download the [2D MOT 2015 benchmark dataset](https://motchallenge.net/data/2D_MOT_2015/#download)
-0. Create a symbolic link to the dataset
-  ```
-  $ ln -s /path/to/MOT2015_challenge/data/2DMOT2015 mot_benchmark
-  ```
-0. Run the demo with the ```--display``` flag
-  ```
-  $ python sort.py --display
-  ```
-
 
 ### Main Results
 
@@ -81,12 +59,11 @@ Using the [MOT challenge devkit](https://motchallenge.net/devkit/) the method pr
  KITTI-17       | 67.1 | 92.3 | 0.26 |  9   1   8   0|   38   225    9   16|  60.2  72.3  61.3
  *Overall*      | 49.5 | 77.5 | 1.24 | 234  48 111  75| 3311 11660  274  499|  34.0  73.3  35.1
 
-
 ### Using SORT in your own project
 
 Below is the gist of how to instantiate and update SORT. See the ['__main__'](https://github.com/abewley/sort/blob/master/sort.py#L239) section of [sort.py](https://github.com/abewley/sort/blob/master/sort.py#L239) for a complete example.
     
-    from sort import *
+    from sort import Sort
     
     #create instance of SORT
     mot_tracker = Sort() 
