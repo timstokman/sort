@@ -42,7 +42,7 @@ If you find this repo useful in your research, please consider citing:
 
 To install the package:
 ```
-pip install simple-online-realtime-tracking==0.2
+pip install simple-online-realtime-tracking==0.3
 ```
 
 ### Main Results
